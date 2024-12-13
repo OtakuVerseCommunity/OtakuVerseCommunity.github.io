@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OtakuVerse Community</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen">
+    <nav class="fixed top-0 left-0 right-0 z-50 navbar-blur">
+        <div class="container mx-auto px-4 flex justify-between items-center py-4">
+            <div class="flex items-center">
+                <i class='bx bx-rocket text-3xl mr-3 text-cyan-400'></i>
+                <span class="text-2xl font-bold gradient-text">OtakuVerse</span>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#beranda" class="hover:text-cyan-400 transition flex items-center">
+                    <i class='bx bx-home mr-2'></i>Beranda
+                </a>
+                <a href="#fitur" class="hover:text-cyan-400 transition flex items-center">
+                    <i class='bx bx-star mr-2'></i>Benefit
+                </a>
+                <a href="#event" class="hover:text-cyan-400 transition flex items-center">
+                    <i class='bx bx-calendar mr-2'></i>Event
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="beranda" class="relative min-h-screen flex items-center justify-center text-center pt-16">
+        <div class="container mx-auto px-4">
+            <h2 id="hero-title" class="text-4xl md:text-6xl font-bold mb-6 gradient-text typed-out">
+                OtakuVerse Community
+            </h2>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
+                Komunitas Anime Terbesar dan Paling Seru di Indonesia!
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="https://chat.whatsapp.com/EIbemmqz9pjHaIYSoGnnrB" 
+                   target="_blank" 
+                   class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full flex items-center space-x-2 transition">
+                    <i class='bx bxl-whatsapp'></i>
+                    <span>Gabung WhatsApp</span>
+                </a>
+                <a href="https://www.instagram.com/otakuversecommunity/profilecard/?igsh=MTNybGMzdDE3djF3NQ==" 
+                   target="_blank" 
+                   class="bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-full flex items-center space-x-2 transition">
+                    <i class='bx bxl-instagram'></i>
+                    <span>Ikuti Instagram</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Fitur Section -->
+    <section id="fitur" class="py-16">
+        <div class="container mx-auto px-4">
+            <h3 class="text-4xl text-center mb-12 font-bold gradient-text">Benefit Eksklusif OtakuVerse</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="feature-card p-6 rounded-xl text-center" onclick="openModal('forum-modal')">
+                    <i class='bx bx-chat text-6xl mb-4 text-cyan-400'></i>
+                    <h4 class="text-2xl font-semibold mb-4">Forum Diskusi</h4>
+                    <p class="opacity-80 mb-4">Ruang diskusi eksklusif untuk berbagi passion anime</p>
+                    <a href="#" class="info-link">Daftar Forum</a>
+                </div>
+                <div class="feature-card p-6 rounded-xl text-center" onclick="openModal('rekomendasi-modal')">
+                    <i class='bx bx-movie text-6xl mb-4 text-purple-400'></i>
+                    <h4 class="text-2xl font-semibold mb-4">Rekomendasi Anime</h4>
+                    <p class="opacity-80 mb-4">Dapatkan rekomendasi anime terbaik setiap musim</p>
+                    <a href="#" class="info-link">Daftar Rekomendasi</a>
+                </div>
+                <div class="feature-card p-6 rounded-xl text-center" onclick="openModal('budaya-modal')">
+                    <i class='bx bx-book text-6xl mb-4 text-green-400'></i>
+                    <h4 class="text-2xl font-semibold mb-4">Belajar Budaya Jepang</h4>
+                    <p class="opacity-80 mb-4">Materi edukasi budaya dan bahasa Jepang</p>
+                    <a href="#" class="info-link">Jadwal Kelas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Overlays for Fitur -->
+    <div id="forum-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('forum-modal')">&times;</span>
+            <h3 class="text-2xl font-bold mb-4 gradient-text">Forum Diskusi</h3>
+            <p>Forum diskusi OtakuVerse adalah tempat ideal bagi para pecinta anime untuk berbagi pemikiran, teori, dan pengalaman. Diskusikan anime favorit, rekomendasi terbaru, dan terhubung dengan komunitas anime terbesar di Indonesia!</p>
+        </div>
+    </div>
+
+    <div id="rekomendasi-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('rekomendasi-modal')">&times;</span>
+            <h3 class="text-2xl font-bold mb-4 gradient-text">Rekomendasi Anime</h3>
+            <p>Setiap musinm, tim kurator kami akan memberikan rekomendasi anime terbaik. Kami memilih anime dari berbagai genre untuk memastikan setiap anggota menemukan serial yang sempurna sesuai selera mereka.</p>
+        </div>
+    </div>
+
+    <div id="budaya-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('budaya-modal')">&times;</span>
+            <h3 class="text-2xl font-bold mb-4 gradient-text">Belajar Budaya Jepang</h3>
+            <p>Kelas budaya Jepang kami mengajak Anda mendalami bahasa, tradisi, dan nuansa budaya di balik anime. Dari bahasa dasar hingga insight mendalam tentang budaya pop Jepang, kami siap membuka pintu pengetahuan Anda!</p>
+        </div>
+    </div>
+
+    <!-- Event Section -->
+    <section id="event" class="py-16">
+        <div class="container mx-auto px-4">
+            <h3 class="text-4xl text-center mb-12 font-bold gradient-text">Event Mendatang</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="event-card p-6 rounded-xl" onclick="openModal('cosplay-modal')">
+                    <div class="flex items-center mb-4">
+                        <i class='bx bx-user-voice text-4xl mr-4 text-cyan-400'></i>
+                        <h4 class="text-xl font-semibold">Cosplay Competition</h4>
+                    </div>
+                    <p class="opacity-80 mb-4">Unjuk kebolehan cosplay terbaik mu dan menangkan hadiah utama!</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm bg-cyan-600 text-white px-3 py-1 rounded-full">coming soon</span>
+                        <a href="#" class="info-link">Detail Event</a>
+                    </div>
+                </div>
+                <div class="event-card p-6 rounded-xl" onclick="openModal('movie-modal')">
+                    <div class="flex items-center mb-4">
+                        <i class='bx bx-film text-4xl mr-4 text-purple-400'></i>
+                        <h4 class="text-xl font-semibold">Anime Movie Marathon</h4>
+                    </div>
+                    <p class="opacity-80 mb-4">Nikmati film-film anime terbaik sepanjang tahun!</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm bg-purple-600 text-white px-3 py-1 rounded-full">coming soon</span>
+                        <a href="#" class="info-link">Detail Event</a>
+                    </div>
+                </div>
+                <div class="event-card p-6 rounded-xl" onclick="openModal('game-modal')">
+                    <div class="flex items-center mb-4">
+                        <i class='bx bx-game text-4xl mr-4 text-green-400'></i>
+                        <h4 class="text-xl font-semibold">Game Anime Battle</h4>
+                    </div>
+                    <p class="opacity-80 mb-4">Turnamen game anime terbesar dengan hadiah jutaan rupiah!</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm bg-green-600 text-white px-3 py-1 rounded-full">coming soon</span>
+                        <a href="#" class="info-link">Detail Event</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Overlays for Events -->
+    <div id="cosplay-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('cosplay-modal')">&times;</span>
+            <h3 class="text-2xl font-bold mb-4 gradient-text">Cosplay Competition</h3>
+            <p>Unjuk kebolehan cosplay terbaik mu dalam kompetisi yang spektakuler! Hadiah utama menanti para cosplayer berbakat. Kategori penilaian meliputi keakuratan kostum, ekspresi karakter, dan kreativitas.</p>
+        </div>
+    </div>
+
+    <div id="movie-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('movie-modal')">&times;</span>
+            <h3 class="text-2xl font-bold mb-4 gradient-text">Anime Movie Marathon</h3>
+            <p>Nikmati deretan film anime terbaik sepanjang tahun dalam satu malam seru! Rangkaian film pilihan dari berbagai genre akan menemani malam Anda. Terdapat sesi diskusi dan hadiah menarik untuk peserta.</p>
+        </div>
+    </div>
+
+    <div id="game-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('game-modal')">&times;</span>
+            <h3 class="text-2xl font-bold mb-4 gradient-text">Game Anime Battle</h3>
+            <p>Turnamen game anime terbesar dengan hadiah jutaan rupiah! Berbagai kategori game anime akan dipertandingkan. Baik untuk pemain profesional maupun penggemar game, kompetisi ini menawarkan pengalaman gaming yang seru!</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black bg-opacity-50 py-4 text-center">
+        <p class="text-sm text-gray-300">© 2024 OtakuVerse | Dibuat oleh Zulfikar Aziz Saripudin</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
